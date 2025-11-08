@@ -44,8 +44,8 @@ jobs:
         draft: false
         prerelease: ${{ github.event.inputs.pre_release }}
         body: "Release ${{ github.event.inputs.release_name }}"
-        env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
